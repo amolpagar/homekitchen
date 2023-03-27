@@ -1,0 +1,11 @@
+# npm packages
+package-lock.json
+yarn.lock
+
+# Temporary files
+*.bak
+*.tmp
+
+# Dependency directories
+node_modules/
+jspm_packages/
