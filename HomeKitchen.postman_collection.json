@@ -1,0 +1,39 @@
+{
+	"info": {
+		"_postman_id": "93549247-088f-48fb-9987-ce73f04b9a84",
+		"name": "HomeKitchen",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Kitchen",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Rakhis Kitchen\",\r\n    \"address\": \"Vegas\",\r\n    \"contact\": \"111-222-2222\",\r\n    \"schedule\": \"9.00 am to 12.00pm Mon to Fri\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/v1/chef/kitchen",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"chef",
+						"kitchen"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
