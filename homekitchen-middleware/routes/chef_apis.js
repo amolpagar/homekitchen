@@ -6,8 +6,16 @@ const { ObjectId } = require('mongodb');
 chef_router.post("/kitchen", async (req, res) => {
     const { name, address, contact, schedule } = req.body;
     const newKitchen = { name, address, contact, schedule };
-    const result = await kitchens_collection.insertOne(newKitchen);
-    res.json(result.ops[0]);
+    kitchens_collection.insertOne(newKitchen)
+    .then(function (data) {
+        if (data) {          
+          return res.status(201).send(data);
+        }
+      })
+      .catch(function (err) {
+        console.log(err);
+        return res.status(500).json({ message: err });
+      });
 });
 
 chef_router.put("/kitchen/:kitchen_id", async (req, res) => {

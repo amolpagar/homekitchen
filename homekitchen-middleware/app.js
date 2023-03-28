@@ -15,7 +15,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(`${api}/chef`, chefsRouter);
+app.use(`/v1/chef`, chefsRouter);
 
 
 module.exports = app;
