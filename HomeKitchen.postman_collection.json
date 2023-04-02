@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "93549247-088f-48fb-9987-ce73f04b9a84",
+		"_postman_id": "bbc5f893-44a4-46b1-ba5e-88ef63ba6763",
 		"name": "HomeKitchen",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -32,6 +32,43 @@
 						"kitchen"
 					]
 				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Customer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Jane Smith\",\n  \"dob\": \"1990-05-15\",\n  \"email\": \"janesmith@example.com\",\n  \"phone\": {\n    \"areaCode\": \"456\",\n    \"number\": \"555-5678\",\n    \"phoneType\": \"work\"\n  },\n  \"address\": {\n    \"line1\": \"456 Broadway\",\n    \"line2\": \"Suite 200\",\n    \"city\": \"Anytown\",\n    \"state\": \"CA\",\n    \"zip\": \"12345\",\n    \"type\": \"work\"\n  }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/v1/customer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"customer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Customer",
+			"request": {
+				"method": "GET",
+				"header": []
 			},
 			"response": []
 		}
