@@ -1,0 +1,9 @@
+/* Styles for Customer Registration Page */
+
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+/* Additional styles for form elements can go here */
